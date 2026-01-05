@@ -1,0 +1,118 @@
+1.Encapsulation anlayışı nədir və OOP-də nə məqsədlə istifadə olunur?
+    yaradılan classın daxilindəki istənilən obleyktlərin private edilib gizlədilməsidir.
+     burada həm artıq dataları gizlətmək həmdə lazımı dataların təhlükəsizliyini qorumaq mümkündür.
+      həmin datalara müdaxikənidə kontrollu formada getter və ya setter kimi methodlar ilə bir başa yox
+       dolayısı yol ilə müdaxilə etmək olur
+
+
+
+2.Eyni paket daxilində giriş imkanı verən access modifier hansıdır və necə işləyir?
+
+    prodected classlar vəya propertylər sadəcə onunla eyni paket daxilində əl çatan olur və tanınır.
+    eyni paket dedikdə yəni eyni folder daxilində olması nəzərdə tutulur bir növ namespace kimi
+
+
+3.Getter və setter metodlarından niyə istifadə olunur?
+    private olan bir dəyişənə bir başa yox dolayısı yol ilə müdaxilə etmək üçün.
+
+
+4.OOP-də IS-A əlaqəsi nədir? Nümunə ilə izah et.
+   oop də is a əlaqəsi bir classın özünü başqa bir class kimi aparmasıdır.
+    yəni bir class  başqa classdan mirasalırsa o zaman is a olur.
+     məsələn cat clası animal clasından miras aldıqda cat həmdə bir animal olmuş olur
+
+
+5.HAS-A relationship nəyi ifadə edir və hansı OOP anlayışına aiddir?
+    has a əlaqəsi bir clasın daxilində yeni bir classın olmasıdır.
+     yəni bir animal clasının daxilində cat deyə bir yeni class yarada bilərik və bu zaman  has a əlaqəsi olur.
+     həni adında bilindiyi kimi has yəni bir classın başqa bir classa sahib olmasıdır.
+     amma səmimi olsam hansı oop anlayışına aid olduğunu bilmirəm
+
+
+6.Java-da bütün siniflərin valideyn (parent) sinfi hansıdır?
+
+    javada bütün classlar object classından miras aldığı üçün bütün classların parent classı object classıdır
+
+
+7.toString() metodu nə üçün istifadə olunur?
+
+    tostring methodu ilə obyektləri və dataları string formatına çevirə bilirik.
+
+
+8.equals() metodu obyektləri nə əsasında müqayisə edir?
+
+    equals methodu iki obyekti qarşılaşdırmaq  müqaisə etmək üçündür və
+     opyektləri dəyərinə yəni valuesinə görə check edir
+
+9.hashCode() metodu əsasən harada və nə üçün istifadə olunur?
+
+    hər bir obyektin və ya datanın hashcodu olur bu da datanı daha tez axtarıb tapmağa kömək edir.
+
+10.Runtime polymorphism necə yaranır?
+    bu əslində generic method kimidir.
+    yəni super class tipində bir dəyişin göndərə bilərik.
+    həmin dəyişən runtime zamanı super classdan miras alan hansı opject göndərsək o olur.
+    yəni tipii super class nədirsə o olur amma run time zamanı super classın
+    istənilən sub classlarını göndərə bilərik
+
+11.Abstraction anlayışı nə deməkdir?
+    Abstraction lazımsız methodları gizlətməkdir.
+    iki yol ilə etmək olar biri abstract class ilə digəri isə interface ilə.
+    abstract classlarda və interfacelərdə methodun body hissəsi olmur.
+    body hissəsini hansı class bu interfacedən və ya asbtract classdan istifadə edərsə orada
+    həmin clasa uyğun yazılır. məsələn bütün CRUD methodları üçün bir interface
+    yazıb sonra hər bir class üçün həmin interface implement olunub hər bir classa özəl
+    methodların bodysi doldurula bilər. methodların override olması mütləqdir
+
+
+12.this açar sözü nəyi ifadə edir?
+
+    this açar sözü cari obyektin göstərir.
+
+13.super() nə üçün istifadə olunur?
+
+    miras alınan classa dataları ötürmək üçün istifadə olunur. constructora bir başa dataları ötürür.
+
+14.instanceof operatoru nəyi yoxlayır?
+    bu operator ilə bir classın başqa bir classdan miras alıb
+    almamasını yoxlayırıq. yəni bir class başqa bir classın sub
+    classıdırmı o yoxlanır və true və ya false qaytarır
+
+15.Abstract class haqqında doğru xüsusiyyətləri izah et.
+
+    classın bir növüdür. methodlarda abstract olmalıdır.
+    digər classlar extends edərək methodlarını override edərək istifadə edə bilər.
+    və ən əsası obyekt yaratmaq mümkün deyil.
+
+16.İnterface-lər haqqında nə bilirsən? Metodları ilə bağlı əsas xüsusiyyəti nədir?
+
+    istənilən classlarda interfaceləri implement edərək interfacenin daxilindəki
+    methodalı istifadə etmək mümkündür. bu zaman override etmək mütləqdir.
+    dəyişənləri public static final olmalıdır və daxilində dəyişənlərə dəyər mənimsətmək
+    mümkün deyil və default methodu mövcutdur ki
+    buradada normaldan fərqli olaraq body hissəsini yaza bilərik
+
+17.Enum nədir və hansı məqsədlə istifadə olunur?
+
+    enum class kimi yaradılır.
+    və adətən enum ilə typelər yaradılır.
+    dəyişənlərin həm dəyəri həmdə int idləri olur. idlərini müəyyən etmək olur.
+    və istənilən zaman enumu çağıraraq dəyişənindən istifadə edəbilərik.
+
+18.Autoboxing nə deməkdir?
+
+    bir tipin başqa bir tipə çüvrilməsidir. məsələn int dən  Integer tipinə çevrilmə
+
+19.Checked exception nədir? Bir nümunə göstər.
+
+    try ilə şübhəli hissəni yoxlayıb və əgər problem aldığımız təqdirdə
+    catch ilə bir exception göstərməkdir.
+    bunun məqsədi bir problem olduğu zaman proqramın dayanmaması istifadçiyə
+    istədiyimiz mənalı mesajı göstərmək həmçinin təhlükəsizliyi təmin etməkdir.
+    çünki istifadəçinin görməməli olduğu məlumatların qarşısınıda almış oluruq.
+
+20.throws açar sözü nə üçün istifadə olunur?
+
+    throws bir xəbərdarlıq kimi düşünmək olar.
+    yəni bir exception çıxa bilər deməkdir.
+    throw isə konkiret bir exception atmaqdır.
