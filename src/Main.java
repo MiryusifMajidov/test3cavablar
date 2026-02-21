@@ -1,13 +1,38 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class Main {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {
+        Student student = new Student(20, "MİRİMİRİ");
+        //Student student2 = new Student(20, "mirimiri");
+
+        Validator.validate(student);
+        //Validator.validate(student2);
+        /*BasicSerializationDemo.saveStudent(student, "student.ser");
+
+        Student loadStudent = BasicSerializationDemo.loadStudent("student.ser");
+        System.out.println(loadStudent);*/
+
+        /*Class<String> s = String.class;
+
+        Method method = Student.class.getMethod("toString");
+        Object result  = method.invoke(student);
+
+        Field field = Student.class.getField("name");
+
+        System.out.println(field.get(student));
+
+        field.set(student, "ALi");
+
+        System.out.println(field.get(student));*/
+
+
     }
 }
